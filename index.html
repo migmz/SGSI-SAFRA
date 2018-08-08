@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Login Safra</title>
+<link href="css/style.css" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Raleway" rel="stylesheet">
+  
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+<div class="filtrovid">
+  <video autoplay="autoplay" id="video_Fondo" loop="loop" preload="auto" muted volume="0">
+    <source src="img/v2-1.mp4" type="video/mp4">
+    
+  </video>
+</div>
+</body>
+</html>
+<div class="container">
+  <div class="profile">
+    <button class="perfil_ico" id="toggleProfile"><img alt="Avatar" src="img/usuario.png"/></button>
+    
+	  
+	  <form action="SGSI/index.html"  onSubmit="return login()">
+      <div class="profile__form">
+        <div class="profile__fields">
+          <center>
+            <h1>Iniciar Sesión</h1>
+          </center>
+          <div class="field">
+            <input class="input" id="fieldUser" pattern=".*\S.*" required="required" type="text"/>
+            <label class="label" for="fieldUser">Usuario</label>
+          </div>
+          <div class="field">
+            <input class="input" id="fieldPassword" pattern=".*\S.*" required="required" type="password"/>
+            <label class="label" for="fieldPassword">Contraseña</label>
+          </div>
+          <div class="profile__footer">
+            <center>
+              <button class="btn" type="submit" value="Aceptar">Entrar</button>
+            </center>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<script src="js/index.js">
+</script>
+<script src="js/Background.js">
+</script>

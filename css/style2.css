@@ -1,0 +1,257 @@
+*, *:after, *::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    background-color: #2a94d6;
+}
+
+section {
+    position: relative;
+    padding: 96px 10%;
+    color: #fff;
+    text-align: center;
+}
+
+h1 {
+    color: #bce726;
+    margin: 0 0 45px 0;
+    padding: 0;
+    font-size: 2.8em;
+    font-weight: 400;
+}
+
+section h2 {
+    margin: 0 0 45px 0;
+    padding: 0;
+    font-size: 2.8em;
+    font-weight: 400;
+}
+
+.color {
+    background: #005388;
+}
+
+section::before, section::after {
+    position: absolute;
+    content: '';
+    pointer-events: none;
+}
+
+table {
+    width: 100%;
+}
+
+.Separador::before, .Separador::after {
+    right: 0;
+    left: 0;
+    z-index: 10;
+    display: block;
+    height: 90px;
+    background-size: 50px 100%;
+}
+
+.Separador::before {
+    top: -90px;
+    background-image: -webkit-gradient(linear, 0 0, 300% 100%, color-stop(0.25, transparent), color-stop(0.25, #009ee0));
+    background-image: linear-gradient(315deg, #0491CC 25%, transparent 25%), linear-gradient( 45deg, #005388 25%, transparent 25%);
+    background-position: 50%;
+}
+
+.Separador::after {
+    top: 100%;
+    background-image: -webkit-gradient(linear, 0 0, 300% 100%, color-stop(0.25, #005388), color-stop(0.25, #0491CC));
+    background-image: linear-gradient(135deg, #005388 25%, transparent 25%), linear-gradient(225deg, #005388 25%, transparent 25%);
+    background-position: 50%;
+}
+
+#formulario {
+    display: inline-grid;
+    padding-right: 75px;
+}
+
+.input {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin: 1em;
+    max-width: 400px;
+    width: calc(100% - 2em);
+    vertical-align: top;
+}
+
+.input__field {
+    position: relative;
+    display: block;
+    float: right;
+    padding: 0.8em;
+    width: 60%;
+    border: none;
+    border-radius: 0;
+    background: #f0f0f0;
+    color: #aaa;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-appearance: none;
+}
+
+.input__field:focus {
+    outline: none;
+}
+
+.input__lbl {
+    display: inline-block;
+    float: right;
+    padding: 0 1em;
+    width: 40%;
+    color: #6a7989;
+    font-weight: bold;
+    font-size: 70.25%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.input__lbl-cont {
+    position: relative;
+    display: block;
+    padding: 1.6em 0;
+    width: 100%;
+}
+
+.caja1 {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0px 0px 0px 2px transparent;
+    color: #eca29b;
+    -webkit-transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s;
+}
+
+.caja2 {
+    padding: 0;
+    width: 100%;
+    text-align: left;
+}
+
+.caja2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 64px;
+    box-shadow: 0px 0px 0px 0px;
+    color: rgba(188, 231, 38, 0.6);
+}
+
+.caja1:focus {
+    box-shadow: 0px 0px 0px 2px #bce726;
+}
+
+.caja1:focus+.caja2 {
+    pointer-events: none;
+}
+
+.caja1:focus+.caja2::after {
+    -webkit-animation: anim-shadow 0.3s forwards;
+    animation: anim-shadow 0.3s forwards;
+}
+
+@-webkit-keyframes anim-shadow {
+    to {
+        box-shadow: 0px 0px 100px 50px;
+        opacity: 0;
+    }
+}
+
+@keyframes anim-shadow {
+    to {
+        box-shadow: 0px 0px 100px 50px;
+        opacity: 0;
+    }
+}
+
+.caja3 {
+    padding: 5px 1px;
+    font-size: 20px;
+    color: white;
+}
+
+.enviar {
+    background-color: #BCE726;
+    color: #2D2A3A;
+    font-size: 24px;
+    font-weight: bold;
+    outline: none;
+    padding: 15px 35px;
+    margin-right: 30px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 30px;
+    transition: all 0.20s linear;
+    -webkit-transition: all 0.20s linear;
+    -moz-transition: all 0.20s linear;
+    position: relative;
+    bottom: 0;
+}
+
+.oprimir {
+    background: #BCE726;
+    box-shadow: 0px 5px 0 #A6CC21;
+}
+
+.enviar:active {
+    bottom: -5px;
+}
+
+.oprimir:active {
+    box-shadow: 0 0 0 #8BAC18, inset 0 0 5px #000000;
+}
+
+.imagenes_lnk {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #BCE726;
+    border: none;
+    color: #111;
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.imagenes_lnk span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.imagenes_lnk span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.imagenes_lnk:hover span {
+    padding-right: 25px;
+}
+
+.imagenes_lnk:hover span:after {
+    opacity: 1;
+    right: 0;
+}
